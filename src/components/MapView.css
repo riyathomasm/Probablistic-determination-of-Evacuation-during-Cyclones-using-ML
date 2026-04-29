@@ -1,0 +1,140 @@
+.map-wrapper {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-void);
+}
+
+.map-container {
+  position: absolute;
+  inset: 0;
+}
+
+/* ── Tooltip ── */
+.map-tooltip {
+  position: absolute;
+  bottom: 80px;
+  left: 24px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-mid);
+  padding: 12px 14px;
+  min-width: 200px;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.tooltip-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--cyan);
+  margin-bottom: 8px;
+}
+
+.tooltip-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  padding: 3px 0;
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.tooltip-row:last-of-type {
+  border-bottom: none;
+}
+
+.tooltip-row span:last-child {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.tooltip-hint {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-top: 8px;
+}
+
+/* ── Legend ── */
+.map-legend {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 50;
+}
+
+.legend-label {
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+}
+
+.legend-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.legend-gradient {
+  width: 140px;
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    rgba(8,30,80,0.9),
+    rgba(8,100,60,0.9),
+    rgba(245,158,11,0.9)
+  );
+  border-radius: 1px;
+}
+
+.legend-ticks {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+}
+
+.legend-ticks span {
+  font-size: 9px;
+  color: var(--text-dim);
+}
+
+.legend-unit {
+  font-size: 8px;
+  color: var(--text-dim);
+  letter-spacing: 0.06em;
+}
+
+/* ── View controls ── */
+.view-controls {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 50;
+}
+
+.view-btn {
+  width: 32px;
+  height: 32px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-mid);
+  color: var(--text-secondary);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.view-btn:hover {
+  background: var(--bg-raised);
+  color: var(--cyan);
+  border-color: var(--cyan);
+}

@@ -1,0 +1,84 @@
+.seasonal-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.seasonal-header {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.seasonal-title {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+}
+
+.seasonal-sub {
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+.seasonal-svg {
+  width: 100%;
+  display: block;
+}
+
+.seasonal-legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+.legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.seasonal-insights {
+  border: 1px solid var(--border-dim);
+}
+
+.insight-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.insight-row:last-child {
+  border-bottom: none;
+}
+
+.insight-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.insight-value {
+  font-size: 13px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.seasonal-note {
+  font-size: 9px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  border-top: 1px solid var(--border-dim);
+  padding-top: 10px;
+}

@@ -1,0 +1,211 @@
+.evac-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.evac-section-label {
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+
+/* ── Scenarios ── */
+.scenario-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.scenario-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+  transition: all 0.15s;
+}
+
+.scenario-btn:hover {
+  border-color: var(--border-mid);
+  background: var(--bg-raised);
+}
+
+.scenario-btn.active {
+  border-color: var(--cyan);
+  background: var(--cyan-glow);
+}
+
+.scenario-label {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.scenario-btn.active .scenario-label {
+  color: var(--cyan);
+}
+
+.scenario-detail {
+  font-size: 9px;
+  color: var(--text-dim);
+}
+
+/* ── Urgency bar ── */
+.urgency-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.urgency-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--bg-raised);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.urgency-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.4s ease, background 0.3s;
+}
+
+.urgency-label {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  min-width: 64px;
+  text-align: right;
+}
+
+/* ── Numbers ── */
+.evac-numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.evac-num {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.evac-num.full {
+  grid-column: 1 / -1;
+}
+
+.evac-num-value {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.evac-num-label {
+  font-size: 9px;
+  color: var(--text-dim);
+}
+
+.evac-num.accent-red   .evac-num-value { color: var(--red); }
+.evac-num.accent-green .evac-num-value { color: var(--green); }
+.evac-num.accent-amber .evac-num-value { color: var(--amber); }
+.evac-num.accent-dim   .evac-num-value { color: var(--text-primary); }
+
+/* ── Verdict ── */
+.evac-verdict {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid;
+  border-radius: 2px;
+}
+
+.evac-verdict.safe {
+  border-color: rgba(16,185,129,0.3);
+  background: var(--green-dim);
+}
+
+.evac-verdict.danger {
+  border-color: rgba(239,68,68,0.3);
+  background: var(--red-dim);
+}
+
+.verdict-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.evac-verdict.safe   .verdict-icon { color: var(--green); }
+.evac-verdict.danger .verdict-icon { color: var(--red); }
+
+.verdict-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.verdict-headline {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.verdict-sub {
+  font-size: 9px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ── Road stats ── */
+.road-stats {
+  border: 1px solid var(--border-dim);
+}
+
+.road-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.road-stat-row:last-child {
+  border-bottom: none;
+}
+
+.road-stat-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.road-stat-value {
+  font-size: 11px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.road-stat-value.warn {
+  color: var(--amber);
+}
+
+/* ── Note ── */
+.evac-note {
+  font-size: 9px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  border-top: 1px solid var(--border-dim);
+  padding-top: 10px;
+}

@@ -1,0 +1,89 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-void);
+}
+
+.app-body {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Loading ── */
+.loading-screen,
+.error-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-void);
+}
+
+.loading-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.loading-ring {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--border-dim);
+  border-top-color: var(--cyan);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--cyan);
+}
+
+.loading-sub {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+}
+
+/* ── Error ── */
+.error-inner {
+  max-width: 480px;
+  padding: 32px;
+  border: 1px solid var(--red-dim);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.error-code {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--red);
+}
+
+.error-inner p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.error-hint {
+  font-size: 11px;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border-dim);
+  padding-top: 12px;
+}

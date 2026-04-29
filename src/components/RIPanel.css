@@ -1,0 +1,260 @@
+.ri-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ri-section-label {
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+
+/* ── Storm info ── */
+.storm-info-box {
+  border: 1px solid var(--border-dim);
+  background: var(--bg-surface);
+}
+
+.storm-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-dim);
+  font-size: 11px;
+}
+
+.storm-info-row:last-child {
+  border-bottom: none;
+}
+
+.storm-info-row span:first-child {
+  color: var(--text-secondary);
+}
+
+.storm-info-row span:last-child {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.no-storm-note {
+  font-size: 11px;
+  color: var(--text-secondary);
+  padding: 12px 14px;
+  border: 1px solid var(--border-dim);
+  line-height: 1.6;
+  background: var(--bg-surface);
+}
+
+/* ── RI probability ── */
+.ri-prob-display {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--border-dim);
+  background: var(--bg-surface);
+}
+
+.ri-prob-number {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--cyan);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.ri-prob-label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.ri-prob-sub {
+  font-size: 9px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+/* ── Preconditions ── */
+.preconditions {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border-dim);
+}
+
+.precondition-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-dim);
+  gap: 12px;
+}
+
+.precondition-row:last-child {
+  border-bottom: none;
+}
+
+.precondition-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.precondition-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.precondition-dot.met     { background: var(--green); box-shadow: 0 0 6px var(--green); }
+.precondition-dot.unmet   { background: var(--red); }
+.precondition-dot.unknown { background: var(--text-dim); }
+
+.precondition-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.precondition-label {
+  font-size: 12px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.precondition-threshold {
+  font-size: 9px;
+  color: var(--text-dim);
+}
+
+.precondition-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.precondition-value {
+  font-size: 12px;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.precondition-source {
+  font-size: 8px;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+}
+
+/* ── SHAP bars ── */
+.shap-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.shap-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shap-label {
+  font-size: 10px;
+  color: var(--text-secondary);
+  width: 130px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shap-bar-track {
+  flex: 1;
+  height: 3px;
+  background: var(--bg-raised);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.shap-bar-fill {
+  height: 100%;
+  background: var(--cyan);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.shap-value {
+  font-size: 9px;
+  color: var(--text-dim);
+  width: 36px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.shap-note {
+  font-size: 9px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  border-top: 1px solid var(--border-dim);
+  padding-top: 10px;
+}
+
+/* ── Backend status ── */
+.backend-status {
+  border: 1px solid var(--border-dim);
+  background: var(--bg-surface);
+}
+
+.backend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-dim);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.backend-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.backend-dot.offline { background: var(--red); opacity: 0.6; }
+.backend-dot.online  { background: var(--green); box-shadow: 0 0 6px var(--green); }
+
+.backend-state {
+  margin-left: auto;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--red);
+}
+
+.backend-note {
+  padding: 10px 12px;
+  font-size: 10px;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.backend-note code {
+  display: block;
+  margin-top: 6px;
+  padding: 6px 10px;
+  background: var(--bg-void);
+  border: 1px solid var(--border-dim);
+  color: var(--cyan);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
